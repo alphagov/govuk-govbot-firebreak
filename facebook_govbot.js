@@ -117,15 +117,24 @@ controller.hears([HELLO], 'message_received', function(bot, message) {
   bot.reply(message, "Hi! I am Govbot. I can answer certain questions about government services. What do you want to know?")
 })
 
+var emoji = require('node-emoji')
+
 controller.on('message_received', function(bot, message) {
   console.log(message.text)
+  var emojiTranslation = emoji.which(message.text)
+
+  if (emojiTranslation) {
+    var input = emojiTranslation.replace('_', ' ');
+  } else {
+    var input = message.text
+  }
 
   // Use search to fetch the smart answer the user could be looking for
-  var res = request('GET', 'https://www.gov.uk/api/search.json?filter_rendering_app=smartanswers&fields[]=title,link&count=1&q=' + message.text);
+  var res = request('GET', 'https://www.gov.uk/api/search.json?filter_rendering_app=smartanswers&fields[]=title,link&count=1&q=' + input);
   var searchResult = JSON.parse(res.body)['results'][0];
 
   if (!searchResult) {
-    bot.reply(message, "I can't find anything related to that. Could you be more specific?")
+    bot.reply(message, "I can't find anything related to '" + input + "'. Could you be more specific?")
     return;
   }
 
