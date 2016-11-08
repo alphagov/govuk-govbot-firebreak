@@ -83,6 +83,12 @@ function startSmartAnswerConversation(smartAnswerSlug, convo) {
       })
 
       var callback = function(response, convo) {
+        if (response.text == "stop") {
+          convo.reply("OK")
+          convo.next()
+          return;
+        }
+
         var answer = questionTable.find(function (q) {
           return q.index == response.text;
         })
