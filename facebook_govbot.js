@@ -18,7 +18,7 @@ controller.setupWebserver(process.env.port || 3000, function(err, webserver) {
 
 function getContent(smartAnswerSlug, currentState) {
   // Use local smart answer branch (has extra API stuff)
-  var url = 'http://localhost:3000/' + smartAnswerSlug + '/y' + currentState + '.json'
+  var url = 'https://smart-answers-with-api.herokuapp.com/' + smartAnswerSlug + '/y' + currentState + '.json'
   console.log("REQUESTING", url);
 
   var res = request('GET', url);
@@ -70,19 +70,17 @@ function startSmartAnswerConversation(smartAnswerSlug, convo) {
         introString = introString + content.body;
       }
 
-      splitTextIntoParts(introString).forEach(function (message) {
-        convo.say(message)
-      })
-
-      var questionString = "";
-
       if (questionTable.length > 0) {
-        questionString = questionString + questionTexts + "\n\n";
+        introString = introString + questionTexts + "\n\n";
       }
 
       if (content.hint) {
-        questionString = questionString + content.hint;
+        introString = introString + content.hint;
       }
+
+      splitTextIntoParts(introString).forEach(function (message) {
+        convo.say(message)
+      })
 
       var callback = function(response, convo) {
         var answer = questionTable.find(function (q) {
@@ -103,7 +101,7 @@ function startSmartAnswerConversation(smartAnswerSlug, convo) {
         convo.next()
       }
 
-      convo.ask(questionString, callback)
+      convo.ask("", callback)
     } else {
       convo.say(content.outcome);
       convo.say("For more a more detailed outcome, go to GOV.UK: https://www.gov.uk/" + smartAnswerSlug + "/y" + currentState);
