@@ -20,6 +20,11 @@ describe('MultipleChoiceSelector', () => {
         const selectionIndex = MultipleChoiceSelector.findMatchIndex('2', options);
         expect(selectionIndex).to.equal(1);
       });
+
+      it('can pick the second option with the number 2', () => {
+        const selectionIndex = MultipleChoiceSelector.findMatchIndex(2, options);
+        expect(selectionIndex).to.equal(1);
+      });
     });
 
     describe('picking by text', () => {
