@@ -1,4 +1,4 @@
-const levenshtein = require('fast-levenshtein');
+const Levenshtein = require('./levenshtein');
 
 class MultipleChoiceSelector {
   static findMatchIndex(selection, options) {
@@ -24,8 +24,8 @@ class MultipleChoiceSelector {
         return {
           index: index,
           option: option,
-          levenshtein: this.levenshteinDistance(selection, option),
-          normalizedLevenshtein: this.normalizedLevenshteinDistance(selection, option),
+          levenshtein: Levenshtein.distance(selection, option),
+          normalizedLevenshtein: Levenshtein.normalizedDistance(selection, option),
         };
       })
       .sort((a, b) => {
@@ -39,17 +39,6 @@ class MultipleChoiceSelector {
       });
 
     return levenshteinDistances[0].index;
-  }
-
-  static levenshteinDistance(a, b) {
-    return levenshtein.get(a.toLowerCase(), b.toLowerCase());
-  }
-
-  static normalizedLevenshteinDistance(a, b) {
-    const levenshteinDistance = levenshtein.get(a.toLowerCase(), b.toLowerCase());
-    const minDistance = Math.abs(a.length - b.length);
-    const maxDistance = Math.max(a.length, b.length);
-    return (levenshteinDistance - minDistance) / (maxDistance - minDistance);
   }
 }
 
