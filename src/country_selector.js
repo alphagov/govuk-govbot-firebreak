@@ -7,11 +7,12 @@ class CountrySelector {
     this.countries = JSON.parse(countryJson);
   }
 
-  findCountrySlug(searchTerm) {
+  findCountry(searchTerm) {
     const countryLevenshteinDistances = this.countries
       .map(country => {
         return {
           slug: country.slug,
+          name: country.name,
           levenshtein: this.minimumDistanceForSynonyms(searchTerm, country.synonyms),
           normalizedLevenshtein: this.minimumNormalizedDistanceForSynonyms(searchTerm, country.synonyms),
         };
@@ -25,7 +26,10 @@ class CountrySelector {
         }
       });
 
-    return countryLevenshteinDistances[0].slug;
+    return {
+      slug: countryLevenshteinDistances[0].slug,
+      humanText: countryLevenshteinDistances[0].name,
+    };
   }
 
   minimumNormalizedDistanceForSynonyms(searchTerm, countrySynonyms) {

@@ -2,6 +2,7 @@ const SmartAnswerApi = require('./smart_answer_api');
 const MultipleChoiceSelector = require('./multiple_choice_selector');
 const DateSelector = require('./date_selector');
 const CountrySelector = require('./country_selector');
+const moment = require('moment');
 
 const QuestionType = {
   MULTIPLE_CHOICE: 'multiple_choice_question',
@@ -49,27 +50,33 @@ class SmartAnswerConversation {
   receiveMessage(content) {
     return (response) => {
       if (response.text.toLowerCase() === 'stop') {
-        this.conversation.reply("I'm sorry I couldn't help you.");
+        this.conversation.say("I'm sorry I couldn't help you.");
         this.conversation.next();
         return;
       }
 
-      const answer = this.parseResponse(response, content);
+      let answer = this.parseResponse(response, content);
 
-      this.conversation.reply(
-        `OK. I think you picked: ${answer}`
+      if (!answer.slug) {
+        this.conversation.say("I'm sorry, I don't understand.");
+        this.askNextQuestion(content);
+        return;
+      }
+
+      this.conversation.say(
+        `OK. I think you picked: ${answer.humanText}`
       );
       this.conversation.next();
 
       // TODO: Allow user to change response?
 
-      this.choices.push(answer);
+      this.choices.push(answer.slug);
 
       this.bot.reply(this.conversation.source_message, {
         sender_action: 'typing_on',
       });
 
-      this.askNextQuestion();
+      this.nextResponse();
     };
   }
 
@@ -81,20 +88,30 @@ class SmartAnswerConversation {
         const multipleChoiceAnswers = this.multipleChoiceAnswers(content);
         const optionsText = multipleChoiceAnswers.map(answer => answer.humanText);
         const choiceIndex = MultipleChoiceSelector.findMatchIndex(response.text, optionsText);
-        answer = multipleChoiceAnswers[choiceIndex].keyForUrl;
+        answer = {
+          slug: multipleChoiceAnswers[choiceIndex].keyForUrl,
+          humanText: multipleChoiceAnswers[choiceIndex].humanText,
+        };
         break;
       case QuestionType.COUNTRY:
         console.info("Parsing as Country");
         const countrySelector = new CountrySelector();
-        answer = countrySelector.findCountrySlug(response.text);
+        answer = countrySelector.findCountry(response.text);
         break;
       case QuestionType.DATE:
         console.info("Parsing as Date");
-        answer = DateSelector.parse(response.text);
+        const date = DateSelector.parse(response.text);
+        answer = {
+          slug: date,
+          humanText: moment(date).format('Do MMMM YYYY'),
+        };
         break;
       default:
         console.info("Parsing as Free text");
-        answer = response.text;
+        answer = {
+          slug: response.text,
+          humanText: response.text,
+        };
     }
 
     console.info(`Interpreted answer as: "${answer}"`);
@@ -112,15 +129,19 @@ class SmartAnswerConversation {
     ];
 
     return messageComponents
-      .filter(component => !!component)
+      .filter(component => !!(component.trim()))
       .join('\n\n');
   }
 
   multipleChoiceAnswers(content) {
+    if (content.question_type === QuestionType.COUNTRY) {
+      return [];
+    }
+
     return content.questions.map((answer, index) => {
       return {
         index: index,
-        humanText: `${index}. ${answer.label}`,
+        humanText: `${index + 1}. ${answer.label}`,
         keyForUrl: answer.value,
       };
     });
@@ -133,7 +154,7 @@ class SmartAnswerConversation {
 
     const chunks = [];
 
-    while(message[currentCharacterIndex]) {
+    while (message[currentCharacterIndex]) {
       if (/\s+/.test(message[currentCharacterIndex++])) {
         chunks.push(
           message.substring(previousChunkEndIndex, currentCharacterIndex)

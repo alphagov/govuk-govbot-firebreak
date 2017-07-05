@@ -16,6 +16,7 @@
     "jfs": "^0.2.6",
     "localtunnel": "^1.8.1",
     "md5": "^2.1.0",
+    "moment": "^2.18.1",
     "mustache": "^2.2.1",
     "node-emoji": "^1.4.1",
     "promise": "^7.1.1",
