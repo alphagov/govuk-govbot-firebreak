@@ -8,6 +8,7 @@ const QuestionType = {
   MULTIPLE_CHOICE: 'multiple_choice_question',
   COUNTRY: 'country_select_question',
   DATE: 'date_question',
+  MONEY: 'money_question',
 };
 
 class SmartAnswerConversation {
@@ -104,6 +105,14 @@ class SmartAnswerConversation {
         answer = {
           slug: date,
           humanText: moment(date).format('Do MMMM YYYY'),
+        };
+        break;
+      case QuestionType.MONEY:
+        console.info("Parsing as monaaaay");
+        const moneys = MoneySelector.parse(response.text);
+        answer = {
+          slug: moneys,
+          humanText: moneys + " pounds",
         };
         break;
       default:
