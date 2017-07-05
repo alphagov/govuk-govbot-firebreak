@@ -7,7 +7,7 @@ class SmartAnswerApi {
     console.info(`GET ${url}`);
 
     const response = request('GET', url);
-    return JSON.parse(response.body)['chatbot_payload'];
+    return JSON.parse(response.body);
   }
 }
 
