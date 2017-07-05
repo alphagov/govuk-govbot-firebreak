@@ -120,7 +120,7 @@ class SmartAnswerConversation {
     return content.questions.map((answer, index) => {
       return {
         index: index,
-        humanText: `${index}. ${answer.label}`,
+        humanText: `${index + 1}. ${answer.label}`,
         keyForUrl: answer.value,
       };
     });
