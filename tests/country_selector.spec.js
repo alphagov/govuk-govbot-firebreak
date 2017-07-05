@@ -7,22 +7,22 @@ describe('CountrySelector', () => {
   const countrySelector = new CountrySelector();
 
   it("can find 'Great Britain'", () => {
-    const slug = countrySelector.findCountrySlug('Great Britain');
-    expect(slug).to.equal('united-kingdom');
+    const country = countrySelector.findCountry('Great Britain');
+    expect(country.slug).to.equal('united-kingdom');
   });
 
   it("can find 'holland'", () => {
-    const slug = countrySelector.findCountrySlug('holland');
-    expect(slug).to.equal('netherlands');
+    const country = countrySelector.findCountry('holland');
+    expect(country.slug).to.equal('netherlands');
   });
 
   it("can find 'US'", () => {
-    const slug = countrySelector.findCountrySlug('US');
-    expect(slug).to.equal('usa');
+    const country = countrySelector.findCountry('US');
+    expect(country.slug).to.equal('usa');
   });
 
   it("can find 'amrca'", () => {
-    const slug = countrySelector.findCountrySlug('amrca');
-    expect(slug).to.equal('usa');
+    const country = countrySelector.findCountry('amrca');
+    expect(country.slug).to.equal('usa');
   });
 });

@@ -1639,5 +1639,12 @@
       "UK",
       "The United Kingdom of Great Britain and Northern Ireland"
     ]
+  },
+  {
+    "slug": "stateless-or-refugee",
+    "name": "Stateless or Refugee",
+    "synonyms": [
+      "Stateless or Refugee"
+    ]
   }
 ]
