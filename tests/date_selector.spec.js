@@ -23,4 +23,9 @@ describe('DateSelector', () => {
     const date = DateSelector.parse("July 4th '17");
     expect(date).to.equal('2017-07-04');
   });
+
+  it("returns null for garbage", () => {
+    const date = DateSelector.parse("foo");
+    expect(date).to.be.null;
+  });
 });

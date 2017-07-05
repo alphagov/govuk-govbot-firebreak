@@ -49,14 +49,20 @@ class SmartAnswerConversation {
   receiveMessage(content) {
     return (response) => {
       if (response.text.toLowerCase() === 'stop') {
-        this.conversation.reply("I'm sorry I couldn't help you.");
+        this.conversation.say("I'm sorry I couldn't help you.");
         this.conversation.next();
         return;
       }
 
-      const answer = this.parseResponse(response, content);
+      let answer = this.parseResponse(response, content);
 
-      this.conversation.reply(
+      if (!answer) {
+        this.conversation.say("I'm sorry, I don't understand.");
+        this.askNextQuestion(content);
+        return;
+      }
+
+      this.conversation.say(
         `OK. I think you picked: ${answer}`
       );
       this.conversation.next();
@@ -69,7 +75,7 @@ class SmartAnswerConversation {
         sender_action: 'typing_on',
       });
 
-      this.askNextQuestion();
+      this.nextResponse();
     };
   }
 
@@ -112,7 +118,7 @@ class SmartAnswerConversation {
     ];
 
     return messageComponents
-      .filter(component => !!component)
+      .filter(component => !!(component.trim()))
       .join('\n\n');
   }
 

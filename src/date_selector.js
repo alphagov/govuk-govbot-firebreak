@@ -3,6 +3,9 @@ const chrono = require('chrono-node').en_GB;
 class DateSelector {
   static parse(date) {
     let parsedDate = chrono.parseDate(date);
+    if (!parsedDate) {
+      return null;
+    }
     return `${parsedDate.getFullYear()}-${DateSelector.zeroPad(parsedDate.getMonth() + 1)}-${DateSelector.zeroPad(parsedDate.getDate())}`;
   }
 
