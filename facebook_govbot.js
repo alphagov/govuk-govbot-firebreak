@@ -17,6 +17,10 @@ controller.setupWebserver(process.env.PORT || 3000, function(err, webserver) {
   });
 });
 
+controller.on('tick', function(bot, event) {
+  // do nothing
+});
+
 var HELLO = new RegExp(/^(hey|hello|hi|help|yo)/i);
 
 controller.hears([HELLO], 'message_received', function(bot, message) {
