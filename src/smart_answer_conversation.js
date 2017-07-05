@@ -103,7 +103,7 @@ class SmartAnswerConversation {
       case QuestionType.DATE:
         console.info("Parsing as Date");
         const date = DateSelector.parse(response.text);
-        answer = date && {
+        answer = {
           slug: date,
           humanText: moment(date).format('Do MMMM YYYY'),
         };
@@ -124,7 +124,7 @@ class SmartAnswerConversation {
         };
     }
 
-    console.info(`Interpreted answer as: "${answer && answer.slug}"`);
+    console.info(`Interpreted answer as: "${answer.slug}"`);
     return answer;
   }
 
