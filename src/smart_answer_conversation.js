@@ -125,7 +125,7 @@ class SmartAnswerConversation {
         };
     }
 
-    console.info(`Interpreted answer as: "${answer}"`);
+    console.info(`Interpreted answer as: "${answer.slug}"`);
     return answer;
   }
 
