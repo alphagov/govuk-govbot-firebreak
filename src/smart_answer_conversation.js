@@ -2,6 +2,7 @@ const SmartAnswerApi = require('./smart_answer_api');
 const MultipleChoiceSelector = require('./multiple_choice_selector');
 const DateSelector = require('./date_selector');
 const CountrySelector = require('./country_selector');
+const MoneySelector = require('./money_selector');
 const moment = require('moment');
 
 const QuestionType = {
@@ -102,7 +103,7 @@ class SmartAnswerConversation {
       case QuestionType.DATE:
         console.info("Parsing as Date");
         const date = DateSelector.parse(response.text);
-        answer = {
+        answer = date && {
           slug: date,
           humanText: moment(date).format('Do MMMM YYYY'),
         };
@@ -110,9 +111,9 @@ class SmartAnswerConversation {
       case QuestionType.MONEY:
         console.info("Parsing as monaaaay");
         const moneys = MoneySelector.parse(response.text);
-        answer = {
+        answer = moneys && {
           slug: moneys,
-          humanText: moneys + " pounds",
+          humanText: `£${moneys}`,
         };
         break;
       default:
