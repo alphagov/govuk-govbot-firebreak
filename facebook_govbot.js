@@ -1,6 +1,7 @@
 var Botkit = require('./lib/Botkit.js');
 var os = require('os');
 var request = require('sync-request');
+const SmartAnswerConversation = require('./src/smart_answer_conversation');
 
 var controller = Botkit.facebookbot({
     debug: true,
@@ -15,105 +16,6 @@ controller.setupWebserver(process.env.PORT || 3000, function(err, webserver) {
     console.log('ONLINE!');
   });
 });
-
-function getContent(smartAnswerSlug, currentState) {
-  // Use local smart answer branch (has extra API stuff)
-  var url = 'https://smart-answers-with-api.herokuapp.com/' + smartAnswerSlug + '/y' + currentState + '.json'
-  console.log("REQUESTING", url);
-
-  var res = request('GET', url);
-  return JSON.parse(res.body)['chatbot_payload'];
-}
-
-function splitTextIntoParts(input) {
-  var len = 300;
-  var curr = len;
-  var prev = 0;
-
-  output = [];
-
-  while (input[curr]) {
-    if (input[curr++] == ' ') {
-        output.push(input.substring(prev,curr));
-        prev = curr;
-        curr += len;
-    }
-  }
-
-  output.push(input.substr(prev));
-
-  return output;
-}
-
-function startSmartAnswerConversation(smartAnswerSlug, convo) {
-  askNextSmartAnswerQuestion("", convo);
-
-  function askNextSmartAnswerQuestion(currentState, convo) {
-    var content = getContent(smartAnswerSlug, currentState)
-
-    if (content.state == "asking") {
-      var index = 0;
-      var questionTable = [];
-
-      content.questions.map(function (question) {
-        index++;
-        questionTable.push({ index: index, humanText: question.label, keyForUrl: question.value });
-      });
-
-      var questionTexts = questionTable.map(function (question) {
-        return question.index + ": " + question.humanText
-      }).join("\n");
-
-      var introString = content.title + "\n\n"
-
-      if (content.body) {
-        introString = introString + content.body;
-      }
-
-      if (questionTable.length > 0) {
-        introString = introString + questionTexts + "\n\n";
-      }
-
-      if (content.hint) {
-        introString = introString + content.hint;
-      }
-
-      splitTextIntoParts(introString).forEach(function (message) {
-        convo.say(message)
-      })
-
-      var callback = function(response, convo) {
-        if (response.text == "stop") {
-          convo.reply("OK")
-          convo.next()
-          return;
-        }
-
-        var answer = questionTable.find(function (q) {
-          return q.index == response.text;
-        })
-
-        if (answer) {
-          var nextState = currentState + '/' + answer.keyForUrl;
-          console.log("interpreting answer as answer to '" + answer.humanText + "'")
-        } else {
-          // free form text input can be validated / parsed using answer.question_type.
-          var nextState = currentState + '/' + response.text;
-          console.log("interpreting answer as free text: " + response.text)
-        }
-
-        bot.reply(convo.source_message, { sender_action: "typing_on" });
-        askNextSmartAnswerQuestion(nextState, convo);
-        convo.next()
-      }
-
-      convo.ask("", callback)
-    } else {
-      convo.say(content.outcome);
-      convo.say("For more a more detailed outcome, go to GOV.UK: https://www.gov.uk/" + smartAnswerSlug + "/y" + currentState);
-    }
-  }
-}
 
 var HELLO = new RegExp(/^(hey|hello|hi|help|yo)/i);
 
@@ -147,9 +49,9 @@ controller.on('message_received', function(bot, message) {
       {
         pattern: bot.utterances.yes,
         callback: function(response, convo) {
-          convo.say("OK. I'm going to start asking some questions..")
+          convo.say("OK. I'm going to start asking some questions...");
           var smartAnswerSlug = searchResult.link.replace('/', '');
-          startSmartAnswerConversation(smartAnswerSlug, convo);
+          SmartAnswerConversation.start(smartAnswerSlug, bot, convo);
           convo.next();
         }
       },
