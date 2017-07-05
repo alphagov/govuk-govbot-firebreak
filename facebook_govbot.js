@@ -44,20 +44,21 @@ controller.on('message_received', function (bot, message) {
 
   // Use search to fetch the smart answer the user could be looking for
   var res = request('GET', 'https://www.gov.uk/api/search.json?filter_rendering_app=smartanswers&fields[]=title,link&count=1&q=' + input);
-  var searchResult = JSON.parse(res.body)['results'][0];
+  const body = JSON.parse(res.body);
+  const result = body && body.results && body.results[0];
 
-  if (!searchResult) {
+  if (!result) {
     bot.reply(message, "I can't find anything related to '" + input + "'. Could you be more specific?")
     return;
   }
 
   bot.startConversation(message, function (err, convo) {
-    convo.ask('Are you looking for "' + searchResult.title + '"?', [
+    convo.ask('Are you looking for "' + result.title + '"?', [
       {
         pattern: bot.utterances.yes,
         callback: function (response, convo) {
           convo.say("OK. I'm going to start asking some questions...");
-          var smartAnswerSlug = searchResult.link.replace('/', '');
+          var smartAnswerSlug = result.link.replace('/', '');
           SmartAnswerConversation.start(smartAnswerSlug, bot, convo);
           convo.next();
         }
