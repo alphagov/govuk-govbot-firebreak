@@ -32,7 +32,8 @@ var emoji = require('node-emoji')
 
 controller.on('message_received', function (bot, message) {
   console.log(message.text)
-  var emojiTranslation = emoji.which(message.text)
+
+  var emojiTranslation = message.text && emoji.which(message.text)
 
   let input;
   if (emojiTranslation) {
