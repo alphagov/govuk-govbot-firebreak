@@ -29,9 +29,17 @@ class SmartAnswerConversation {
   nextResponse() {
     const content = SmartAnswerApi.fetch(this.basePath, this.choices);
     if (content.state === 'asking') {
+      this.handleError(content);
       this.askNextQuestion(content);
     } else {
       this.concludeConversation(content);
+    }
+  }
+
+  handleError(content) {
+    if (content.error) {
+      this.choices.pop();
+      this.conversation.say("Sorry, but I'm not sure what you meant. Could you please be more specific?");
     }
   }
 
