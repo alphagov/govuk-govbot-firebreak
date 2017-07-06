@@ -1,6 +1,8 @@
 var Botkit = require('./lib/Botkit.js');
 var os = require('os');
 var request = require('sync-request');
+var emoji = require('node-emoji')
+
 const SmartAnswerConversation = require('./src/smart_answer_conversation');
 
 var controller = Botkit.facebookbot({
@@ -26,8 +28,6 @@ var HELLO = new RegExp(/^(hey|hello|hi|help|yo)/i);
 controller.hears([HELLO], 'message_received', function (bot, message) {
   bot.reply(message, "Hi! I am Govbot Alpha. I can answer certain questions about government services. Please be aware that this is a highly experimental, unofficial service. Do not base life decisions on my answers. Also be aware that all your questions and answers are recorded and WILL be looked at by humans.\n\nWhat do you want to know? I know about your pension, visa requirements, and much more.")
 })
-
-var emoji = require('node-emoji')
 
 controller.on('message_received', function (bot, message) {
   console.log(message.text)
