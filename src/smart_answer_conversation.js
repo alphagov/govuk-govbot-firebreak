@@ -6,6 +6,7 @@ const MoneySelector = require('./money_selector');
 const moment = require('moment');
 const Utterances = require('./utterances');
 const EmojiInterpreter = require('./emoji_interpreter');
+const RangeSelector = require('./range_selector');
 
 const QuestionType = {
   MULTIPLE_CHOICE: 'multiple_choice_question',
@@ -115,7 +116,14 @@ class SmartAnswerConversation {
         console.info("Parsing as Multiple Choice");
         const multipleChoiceAnswers = this.multipleChoiceAnswers(content);
         const optionsText = multipleChoiceAnswers.map(answer => answer.humanText);
-        const choiceIndex = MultipleChoiceSelector.findMatchIndex(responseText, optionsText);
+
+        let choiceIndex;
+        if (RangeSelector.canSelectFrom(optionsText)) {
+          choiceIndex = RangeSelector.select(responseText, optionsText);
+        } else {
+          choiceIndex = MultipleChoiceSelector.findMatchIndex(responseText, optionsText);
+        }
+
         answer = {
           slug: multipleChoiceAnswers[choiceIndex].keyForUrl,
           humanText: multipleChoiceAnswers[choiceIndex].humanText,
