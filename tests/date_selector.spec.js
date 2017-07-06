@@ -18,7 +18,7 @@ describe('DateSelector', () => {
       expects: '2014-07-04',
     },
     {
-      input: "July 4th '14",
+      input: "July 4th 14",
       expects: null,
     },
     {
@@ -27,6 +27,10 @@ describe('DateSelector', () => {
     },
     {
       input: "Jul 4 1988",
+      expects: "1988-07-04",
+    },
+    {
+      input: "4 Jul 88",
       expects: "1988-07-04",
     }
   ];
