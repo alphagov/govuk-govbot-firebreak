@@ -12,6 +12,7 @@ const QuestionType = {
   COUNTRY: 'country_select_question',
   DATE: 'date_question',
   MONEY: 'money_question',
+  CHECKBOX: 'checkbox_question',
 };
 
 class SmartAnswerConversation {
@@ -47,12 +48,20 @@ class SmartAnswerConversation {
   askNextQuestion(content) {
     const message = this.buildMessage(content);
     this.chunkMessage(message).forEach(chunk => this.conversation.say(chunk));
-    this.conversation.ask('', this.receiveMessage(content));
-    this.conversation.next();
+    if (content.question_type === QuestionType.CHECKBOX) {
+      this.askAboutCheckboxes(content);
+    } else {
+      this.conversation.ask('', this.receiveMessage(content));
+      this.conversation.next();
+    }
   }
 
   concludeConversation(content) {
-    this.conversation.say(content.outcome);
+    if (this.conversation.outcome) {
+      this.conversation.say(content.outcome);
+    } else {
+      this.conversation.say("Unfortunately I don't have a short answer for you.");
+    }
     this.conversation.say(
       `For a more detailed answer, please visit https://www.gov.uk/${this.basePath}/y/${this.choices.join('/')}`
     );
@@ -129,9 +138,9 @@ class SmartAnswerConversation {
         console.info("Parsing as monaaaay");
         const moneys = MoneySelector.parse(responseText);
         answer = moneys && {
-          slug: moneys,
-          humanText: `£${moneys}`,
-        };
+            slug: moneys,
+            humanText: `£${moneys}`,
+          };
         break;
       default:
         console.info("Parsing as Free text");
@@ -161,7 +170,7 @@ class SmartAnswerConversation {
   }
 
   multipleChoiceAnswers(content) {
-    if (content.question_type === QuestionType.COUNTRY) {
+    if (content.question_type === QuestionType.COUNTRY || content.question_type === QuestionType.CHECKBOX) {
       return [];
     }
 
@@ -172,6 +181,48 @@ class SmartAnswerConversation {
         keyForUrl: answer.value,
       };
     });
+  }
+
+  askAboutCheckboxes(content, answers) {
+    answers = answers || [];
+
+    if (answers.length >= content.questions.length) {
+      const selectedAnswers = answers.reduce((array, answer, index) => {
+        const question = content.questions[index];
+        if (answer && question) {
+          array.push(question);
+        }
+        return array;
+      }, []);
+
+      const selectedSlugs = selectedAnswers.map(answer => answer.value).join(',');
+      const answerSummary = selectedAnswers.map(answer => answer.label).join('; ');
+
+      this.choices.push(selectedSlugs);
+      this.conversation.say(`OK. You picked the following: ${answerSummary}.`);
+      this.nextResponse();
+      return;
+    }
+
+    const question = content.questions[answers.length].label + '?';
+    this.conversation.ask(question, (response) => {
+      const responseText = EmojiInterpreter.interpret(response.text);
+
+      if (Utterances.matches(responseText, Utterances.yes)) {
+        answers.push(true);
+      } else if (Utterances.matches(responseText, Utterances.no)) {
+        answers.push(false);
+      } else if (Utterances.matches(responseText, Utterances.skip)) {
+        while(answers.length < content.questions.length) {
+          answers.push(false);
+        }
+      } else {
+        this.conversation.say("I'm sorry, I don't understand.");
+      }
+
+      this.askAboutCheckboxes(content, answers);
+    });
+    this.conversation.next();
   }
 
   chunkMessage(message) {

@@ -6,7 +6,18 @@ class Utterances {
   }
 }
 
+Utterances.yes = [
+  /^(yes|yea|yup|yep|ya|sure|ok|y|yeah|yah)$/,
+  /^\+1$/,
+];
+
+Utterances.no = [
+  /^(no|nah|nope|n)$/,
+  /^-1$/,
+];
+
 Utterances.stop = [
+  /^(quit|cancel|end|stop|nevermind|never mind)$/,
   /^stop$/,
   /^exit$/,
   /^quit$/,
@@ -21,6 +32,12 @@ Utterances.goBack = [
   /that is not/,
   /not what i/,
   /^no\b.+\w+/,
+];
+
+Utterances.skip = [
+  /^skip$/,
+  /^next$/,
+  /^next step$/,
 ];
 
 module.exports = Utterances;
