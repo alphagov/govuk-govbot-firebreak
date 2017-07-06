@@ -4,28 +4,37 @@ const expect = require('chai').expect;
 const DateSelector = require('../src/date_selector');
 
 describe('DateSelector', () => {
-  it('can parse DD/MM/YYYY', () => {
-    const date = DateSelector.parse('04/07/2017');
-    expect(date).to.equal('2017-07-04');
-  });
+  const testCases = [
+    {
+      input: '04/07/2014',
+      expects: '2014-07-04',
+    },
+    {
+      input: '4/7/2014',
+      expects: '2014-07-04',
+    },
+    {
+      input: '4 Jul 14',
+      expects: '2014-07-04',
+    },
+    {
+      input: "July 4th '14",
+      expects: null,
+    },
+    {
+      input: "foo",
+      expects: null,
+    },
+    {
+      input: "Jul 4 1988",
+      expects: "1988-07-04",
+    }
+  ];
 
-  it('can parse DD-MM-YYYY', () => {
-    const date = DateSelector.parse('04-07-2017');
-    expect(date).to.equal('2017-07-04');
-  });
-
-  it('can parse D MMM YY', () => {
-    const date = DateSelector.parse('4 Jul 17');
-    expect(date).to.equal('2017-07-04');
-  });
-
-  it("can parse MMMM Dth 'YY", () => {
-    const date = DateSelector.parse("July 4th '17");
-    expect(date).to.equal('2017-07-04');
-  });
-
-  it("returns null for garbage", () => {
-    const date = DateSelector.parse("foo");
-    expect(date).to.be.null;
+  testCases.forEach(testCase => {
+    it(`should parse "${testCase.input}" as "${testCase.expects}"`, () => {
+      const date = DateSelector.parse(testCase.input);
+      expect(date).to.equal(testCase.expects);
+    });
   });
 });
