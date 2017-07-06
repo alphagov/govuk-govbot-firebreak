@@ -2,6 +2,7 @@ var Botkit = require('./lib/Botkit.js');
 var os = require('os');
 var request = require('sync-request');
 const SmartAnswerConversation = require('./src/smart_answer_conversation');
+const EmojiInterpreter = require('./src/emoji_interpreter');
 
 var controller = Botkit.facebookbot({
   debug: true,
@@ -28,20 +29,10 @@ controller.hears([HELLO], 'message_received', function (bot, message) {
   bot.reply(message, "What do you want to know? I know about your pension, visa requirements, and much more.");
 })
 
-var emoji = require('node-emoji')
-
 controller.on('message_received', function (bot, message) {
-  console.log(message.text)
+  console.log(message.text);
 
-  var emojiTranslation = message.text && emoji.which(message.text)
-
-  let input;
-  if (emojiTranslation) {
-    console.info(`Translating ${message.text} to ${emojiTranslation}`);
-    input = emojiTranslation.replace('_', ' ');
-  } else {
-    input = message.text
-  }
+  const input = EmojiInterpreter.interpret(message.text);
 
   // Use search to fetch the smart answer the user could be looking for
   var res = request('GET', 'https://www.gov.uk/api/search.json?filter_rendering_app=smartanswers&fields[]=title,link&count=1&q=' + input);
