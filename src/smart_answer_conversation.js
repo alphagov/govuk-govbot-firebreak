@@ -57,7 +57,7 @@ class SmartAnswerConversation {
   }
 
   concludeConversation(content) {
-    if (this.conversation.outcome) {
+    if (content.outcome) {
       this.conversation.say(content.outcome);
     } else {
       this.conversation.say("Unfortunately I don't have a short answer for you.");
