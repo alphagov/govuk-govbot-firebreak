@@ -4,6 +4,7 @@ var request = require('sync-request');
 var emoji = require('node-emoji')
 
 const SmartAnswerConversation = require('./src/smart_answer_conversation');
+const EmojiInterpreter = require('./src/emoji_interpreter');
 
 var controller = Botkit.facebookbot({
   debug: true,
@@ -32,15 +33,7 @@ controller.hears([HELLO], 'message_received', function (bot, message) {
 controller.on('message_received', function (bot, message) {
   console.log("INCOMING MESSAGE: ", message)
 
-  var emojiTranslation = message.text && emoji.which(message.text)
-
-  let input;
-  if (emojiTranslation) {
-    console.info(`Translating ${message.text} to ${emojiTranslation}`);
-    input = emojiTranslation.replace('_', ' ');
-  } else {
-    input = message.text
-  }
+  const input = EmojiInterpreter.interpret(message.text);
 
   console.log("INTERPRETED MESSAGE TEXT: ", input)
 

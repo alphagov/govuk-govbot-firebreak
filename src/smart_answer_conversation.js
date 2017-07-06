@@ -5,6 +5,7 @@ const CountrySelector = require('./country_selector');
 const MoneySelector = require('./money_selector');
 const moment = require('moment');
 const Utterances = require('./utterances');
+const EmojiInterpreter = require('./emoji_interpreter');
 
 const QuestionType = {
   MULTIPLE_CHOICE: 'multiple_choice_question',
@@ -92,13 +93,15 @@ class SmartAnswerConversation {
   }
 
   parseResponse(response, content) {
+    const responseText = EmojiInterpreter.interpret(response.text);
+
     let answer;
     switch (content.question_type) {
       case QuestionType.MULTIPLE_CHOICE:
         console.info("Parsing as Multiple Choice");
         const multipleChoiceAnswers = this.multipleChoiceAnswers(content);
         const optionsText = multipleChoiceAnswers.map(answer => answer.humanText);
-        const choiceIndex = MultipleChoiceSelector.findMatchIndex(response.text, optionsText);
+        const choiceIndex = MultipleChoiceSelector.findMatchIndex(responseText, optionsText);
         answer = {
           slug: multipleChoiceAnswers[choiceIndex].keyForUrl,
           humanText: multipleChoiceAnswers[choiceIndex].humanText,
@@ -107,11 +110,11 @@ class SmartAnswerConversation {
       case QuestionType.COUNTRY:
         console.info("Parsing as Country");
         const countrySelector = new CountrySelector();
-        answer = countrySelector.findCountry(response.text);
+        answer = countrySelector.findCountry(responseText);
         break;
       case QuestionType.DATE:
         console.info("Parsing as Date");
-        const date = DateSelector.parse(response.text);
+        const date = DateSelector.parse(responseText);
         answer = {
           slug: date,
           humanText: moment(date).format('Do MMMM YYYY'),
@@ -119,7 +122,7 @@ class SmartAnswerConversation {
         break;
       case QuestionType.MONEY:
         console.info("Parsing as monaaaay");
-        const moneys = MoneySelector.parse(response.text);
+        const moneys = MoneySelector.parse(responseText);
         answer = moneys && {
           slug: moneys,
           humanText: `£${moneys}`,
@@ -128,8 +131,8 @@ class SmartAnswerConversation {
       default:
         console.info("Parsing as Free text");
         answer = {
-          slug: response.text,
-          humanText: response.text,
+          slug: responseText,
+          humanText: responseText,
         };
     }
 
