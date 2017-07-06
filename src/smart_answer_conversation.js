@@ -4,6 +4,7 @@ const DateSelector = require('./date_selector');
 const CountrySelector = require('./country_selector');
 const MoneySelector = require('./money_selector');
 const moment = require('moment');
+const Utterances = require('./utterances');
 
 const QuestionType = {
   MULTIPLE_CHOICE: 'multiple_choice_question',
@@ -51,7 +52,7 @@ class SmartAnswerConversation {
 
   receiveMessage(content) {
     return (response) => {
-      if (response.text.toLowerCase() === 'stop') {
+      if (Utterances.matches(response.text, Utterances.stop)) {
         this.conversation.say("I'm sorry I couldn't help you.");
         this.conversation.next();
         return;
