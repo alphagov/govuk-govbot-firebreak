@@ -135,12 +135,13 @@ class SmartAnswerConversation {
         };
         break;
       case QuestionType.MONEY:
-        console.info("Parsing as monaaaay");
-        const moneys = MoneySelector.parse(responseText);
-        answer = moneys && {
-            slug: moneys,
-            humanText: `£${moneys}`,
-          };
+        console.info("Parsing as Money");
+        const money = MoneySelector.parse(responseText);
+        answer = {
+          slug: money,
+          humanText: money && money.toLocaleString('en-GB',
+            {style: 'currency', currency: 'GBP', currencyDisplay: 'symbol'}),
+        };
         break;
       default:
         console.info("Parsing as Free text");
@@ -213,7 +214,7 @@ class SmartAnswerConversation {
       } else if (Utterances.matches(responseText, Utterances.no)) {
         answers.push(false);
       } else if (Utterances.matches(responseText, Utterances.skip)) {
-        while(answers.length < content.questions.length) {
+        while (answers.length < content.questions.length) {
           answers.push(false);
         }
       } else {
