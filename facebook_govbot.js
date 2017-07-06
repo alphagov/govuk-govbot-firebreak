@@ -15,14 +15,14 @@ var bot = controller.spawn({});
 
 controller.setupWebserver(process.env.PORT || 3000, function (err, webserver) {
   controller.createWebhookEndpoints(webserver, bot, function () {
-    console.log('ONLINE!');
   });
 });
 
 controller.on('tick', function (bot, event) {
-  // do nothing
+  // do not log debug `ticks`
 });
 
+// The first conversation
 var HELLO = new RegExp(/^(hey|hello|hi|help|yo)/i);
 
 controller.hears([HELLO], 'message_received', function (bot, message) {
@@ -30,7 +30,7 @@ controller.hears([HELLO], 'message_received', function (bot, message) {
 })
 
 controller.on('message_received', function (bot, message) {
-  console.log(message.text)
+  console.log("INCOMING MESSAGE: ", message)
 
   var emojiTranslation = message.text && emoji.which(message.text)
 
@@ -42,13 +42,15 @@ controller.on('message_received', function (bot, message) {
     input = message.text
   }
 
+  console.log("INTERPRETED MESSAGE TEXT: ", input)
+
   // Use search to fetch the smart answer the user could be looking for
   var res = request('GET', 'https://www.gov.uk/api/search.json?filter_rendering_app=smartanswers&fields[]=title,link&count=1&q=' + input);
   const body = JSON.parse(res.body);
   const result = body && body.results && body.results[0];
 
   if (!result) {
-    bot.reply(message, "I can't find anything related to '" + input + "'. Could you be more specific?")
+    bot.reply(message, "Sorry, I can't find anything related to '" + input + "'. Could you be more specific?")
     return;
   }
 
@@ -57,7 +59,7 @@ controller.on('message_received', function (bot, message) {
       {
         pattern: bot.utterances.yes,
         callback: function (response, convo) {
-          convo.say("OK. I'm going to start asking some questions...");
+          convo.say("OK. I'm going to start asking some questions.");
           var smartAnswerSlug = result.link.replace('/', '');
           SmartAnswerConversation.start(smartAnswerSlug, bot, convo);
           convo.next();
@@ -67,7 +69,7 @@ controller.on('message_received', function (bot, message) {
         pattern: bot.utterances.no,
         default: true,
         callback: function (response, convo) {
-          convo.say('Okay, are you looking for something else?');
+          convo.say('Okay, what other thing are you looking for?');
           convo.next();
         }
       }
