@@ -67,6 +67,13 @@ class SmartAnswerConversation {
         return;
       }
 
+      if (Utterances.matches(response.text, Utterances.goBack)) {
+        this.conversation.say("Right. Let's try that again.");
+        this.choices.pop();
+        this.nextResponse();
+        return;
+      }
+
       let answer = this.parseResponse(response, content);
 
       if (!answer.slug) {
@@ -79,8 +86,6 @@ class SmartAnswerConversation {
         `OK. I think you picked: ${answer.humanText}`
       );
       this.conversation.next();
-
-      // TODO: Allow user to change response?
 
       this.choices.push(answer.slug);
 
