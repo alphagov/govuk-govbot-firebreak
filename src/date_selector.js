@@ -1,12 +1,25 @@
-const chrono = require('chrono-node').en_GB;
+const chrono = require('chrono-node');
 
 class DateSelector {
   static parse(date) {
-    let parsedDate = chrono.parseDate(date);
-    if (!parsedDate) {
+    const parser = chrono.en_GB;
+
+    let result = parser.parse(date)[0];
+    if (!result) {
       return null;
     }
-    return `${parsedDate.getFullYear()}-${DateSelector.zeroPad(parsedDate.getMonth() + 1)}-${DateSelector.zeroPad(parsedDate.getDate())}`;
+
+    const parsedDate = result.start.knownValues;
+
+    const year = parsedDate.year;
+    const month = parsedDate.month;
+    const day = parsedDate.day;
+
+    if (!year || !month || !day) {
+      return null;
+    }
+
+    return `${year}-${DateSelector.zeroPad(month)}-${DateSelector.zeroPad(day)}`;
   }
 
   static zeroPad(number) {
