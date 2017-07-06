@@ -4,7 +4,13 @@ const Levenshtein = require('./levenshtein');
 class CountrySelector {
   constructor() {
     const countryJson = fs.readFileSync('data/country_names.json');
-    this.countries = JSON.parse(countryJson);
+    this.countries = JSON.parse(countryJson)
+      .map(country => {
+        if (country.citizens) {
+          country.synonyms = country.synonyms.concat(country.citizens);
+        }
+        return country;
+      });
   }
 
   findCountry(searchTerm) {

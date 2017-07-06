@@ -3,14 +3,24 @@
     "slug": "slovenia",
     "name": "Slovenia",
     "synonyms": [
-      "Slovenia"
+      "Slovenia",
+      "The Republic of Slovenia",
+      "SI"
+    ],
+    "citizens": [
+      "Slovene"
     ]
   },
   {
     "slug": "solomon-islands",
     "name": "Solomon Islands",
     "synonyms": [
-      "Solomon Islands"
+      "Solomon Islands",
+      "Solomon Islands",
+      "SB"
+    ],
+    "citizens": [
+      "Solomon Islander"
     ]
   },
   {
@@ -24,28 +34,48 @@
     "slug": "somalia",
     "name": "Somalia",
     "synonyms": [
-      "Somalia"
+      "Somalia",
+      "Federal Republic of Somalia",
+      "SO"
+    ],
+    "citizens": [
+      "Somali"
     ]
   },
   {
     "slug": "south-africa",
     "name": "South Africa",
     "synonyms": [
-      "South Africa"
+      "South Africa",
+      "The Republic of South Africa",
+      "ZA"
+    ],
+    "citizens": [
+      "South African"
     ]
   },
   {
     "slug": "albania",
     "name": "Albania",
     "synonyms": [
-      "Albania"
+      "Albania",
+      "The Republic of Albania",
+      "AL"
+    ],
+    "citizens": [
+      "Albanian"
     ]
   },
   {
     "slug": "afghanistan",
     "name": "Afghanistan",
     "synonyms": [
-      "Afghanistan"
+      "Afghanistan",
+      "The Islamic Republic of Afghanistan",
+      "AF"
+    ],
+    "citizens": [
+      "Afghan"
     ]
   },
   {
@@ -66,7 +96,12 @@
     "slug": "antigua-and-barbuda",
     "name": "Antigua and Barbuda",
     "synonyms": [
-      "Antigua and Barbuda"
+      "Antigua and Barbuda",
+      "Antigua and Barbuda",
+      "AG"
+    ],
+    "citizens": [
+      "Citizen of Antigua and Barbuda"
     ]
   },
   {
@@ -74,35 +109,61 @@
     "name": "Algeria",
     "synonyms": [
       "Sahel",
-      "Algeria"
+      "Algeria",
+      "The People's Democratic Republic of Algeria",
+      "DZ"
+    ],
+    "citizens": [
+      "Algerian"
     ]
   },
   {
     "slug": "andorra",
     "name": "Andorra",
     "synonyms": [
-      "Andorra"
+      "Andorra",
+      "The Principality of Andorra",
+      "AD"
+    ],
+    "citizens": [
+      "Andorran"
     ]
   },
   {
     "slug": "angola",
     "name": "Angola",
     "synonyms": [
-      "Angola"
+      "Angola",
+      "The Republic of Angola",
+      "AO"
+    ],
+    "citizens": [
+      "Angolan"
     ]
   },
   {
     "slug": "armenia",
     "name": "Armenia",
     "synonyms": [
-      "Armenia"
+      "Armenia",
+      "The Republic of Armenia",
+      "AM"
+    ],
+    "citizens": [
+      "Armenian"
     ]
   },
   {
     "slug": "argentina",
     "name": "Argentina",
     "synonyms": [
-      "Argentina"
+      "Argentina",
+      "The Argentine Republic",
+      "AR"
+    ],
+    "citizens": [
+      "Argentine",
+      "Argentinian"
     ]
   },
   {
@@ -116,14 +177,24 @@
     "slug": "austria",
     "name": "Austria",
     "synonyms": [
-      "Austria"
+      "Austria",
+      "The Republic of Austria",
+      "AT"
+    ],
+    "citizens": [
+      "Austrian"
     ]
   },
   {
     "slug": "azerbaijan",
     "name": "Azerbaijan",
     "synonyms": [
-      "Azerbaijan"
+      "Azerbaijan",
+      "The Republic of Azerbaijan",
+      "AZ"
+    ],
+    "citizens": [
+      "Azerbaijani"
     ]
   },
   {
@@ -137,49 +208,84 @@
     "slug": "bangladesh",
     "name": "Bangladesh",
     "synonyms": [
-      "Bangladesh"
+      "Bangladesh",
+      "The People's Republic of Bangladesh",
+      "BD"
+    ],
+    "citizens": [
+      "Bangladeshi"
     ]
   },
   {
     "slug": "barbados",
     "name": "Barbados",
     "synonyms": [
-      "Barbados"
+      "Barbados",
+      "Barbados",
+      "BB"
+    ],
+    "citizens": [
+      "Barbadian"
     ]
   },
   {
     "slug": "belgium",
     "name": "Belgium",
     "synonyms": [
-      "Belgium"
+      "Belgium",
+      "The Kingdom of Belgium",
+      "BE"
+    ],
+    "citizens": [
+      "Belgian"
     ]
   },
   {
     "slug": "belarus",
     "name": "Belarus",
     "synonyms": [
-      "Belarus"
+      "Belarus",
+      "The Republic of Belarus",
+      "BY"
+    ],
+    "citizens": [
+      "Belarusian"
     ]
   },
   {
     "slug": "bolivia",
     "name": "Bolivia",
     "synonyms": [
-      "Bolivia"
+      "Bolivia",
+      "The Plurinational State of Bolivia",
+      "BO"
+    ],
+    "citizens": [
+      "Bolivian"
     ]
   },
   {
     "slug": "belize",
     "name": "Belize",
     "synonyms": [
-      "Belize"
+      "Belize",
+      "Belize",
+      "BZ"
+    ],
+    "citizens": [
+      "Citizen of Belize"
     ]
   },
   {
     "slug": "bhutan",
     "name": "Bhutan",
     "synonyms": [
-      "Bhutan"
+      "Bhutan",
+      "The Kingdom of Bhutan",
+      "BT"
+    ],
+    "citizens": [
+      "Bhutanese"
     ]
   },
   {
@@ -193,14 +299,24 @@
     "slug": "benin",
     "name": "Benin",
     "synonyms": [
-      "Benin"
+      "Benin",
+      "The Republic of Benin",
+      "BJ"
+    ],
+    "citizens": [
+      "Beninese"
     ]
   },
   {
     "slug": "bosnia-and-herzegovina",
     "name": "Bosnia and Herzegovina",
     "synonyms": [
-      "Bosnia and Herzegovina"
+      "Bosnia and Herzegovina",
+      "Bosnia and Herzegovina",
+      "BA"
+    ],
+    "citizens": [
+      "Citizen of Bosnia and Herzegovina"
     ]
   },
   {
@@ -214,7 +330,12 @@
     "slug": "botswana",
     "name": "Botswana",
     "synonyms": [
-      "Botswana"
+      "Botswana",
+      "The Republic of Botswana",
+      "BW"
+    ],
+    "citizens": [
+      "Citizen of Botswana"
     ]
   },
   {
@@ -228,7 +349,12 @@
     "slug": "brazil",
     "name": "Brazil",
     "synonyms": [
-      "Brazil"
+      "Brazil",
+      "The Federative Republic of Brazil",
+      "BR"
+    ],
+    "citizens": [
+      "Brazilian"
     ]
   },
   {
@@ -243,21 +369,36 @@
     "name": "Brunei",
     "synonyms": [
       "Borneo",
-      "Brunei"
+      "Brunei",
+      "Brunei Darussalam",
+      "BN"
+    ],
+    "citizens": [
+      "Citizen of Brunei"
     ]
   },
   {
     "slug": "burundi",
     "name": "Burundi",
     "synonyms": [
-      "Burundi"
+      "Burundi",
+      "The Republic of Burundi",
+      "BI"
+    ],
+    "citizens": [
+      "Citizen of Burundi"
     ]
   },
   {
     "slug": "bulgaria",
     "name": "Bulgaria",
     "synonyms": [
-      "Bulgaria"
+      "Bulgaria",
+      "The Republic of Bulgaria",
+      "BG"
+    ],
+    "citizens": [
+      "Bulgarian"
     ]
   },
   {
@@ -265,7 +406,13 @@
     "name": "Burkina Faso",
     "synonyms": [
       "Sahel",
-      "Burkina Faso"
+      "Burkina Faso",
+      "Burkina Faso",
+      "BF"
+    ],
+    "citizens": [
+      "Burkinabe",
+      "Burkinan"
     ]
   },
   {
@@ -273,14 +420,24 @@
     "name": "Cameroon",
     "synonyms": [
       "Sahel",
-      "Cameroon"
+      "Cameroon",
+      "The Republic of Cameroon",
+      "CM"
+    ],
+    "citizens": [
+      "Cameroonian"
     ]
   },
   {
     "slug": "cambodia",
     "name": "Cambodia",
     "synonyms": [
-      "Cambodia"
+      "Cambodia",
+      "The Kingdom of Cambodia",
+      "KH"
+    ],
+    "citizens": [
+      "Cambodian"
     ]
   },
   {
@@ -288,21 +445,36 @@
     "name": "Canada",
     "synonyms": [
       "arctic",
-      "Canada"
+      "Canada",
+      "Canada",
+      "CA"
+    ],
+    "citizens": [
+      "Canadian"
     ]
   },
   {
     "slug": "cape-verde",
     "name": "Cape Verde",
     "synonyms": [
-      "Cape Verde"
+      "Cape Verde",
+      "The Republic of Cabo Verde",
+      "CV"
+    ],
+    "citizens": [
+      "Cape Verdean"
     ]
   },
   {
     "slug": "central-african-republic",
     "name": "Central African Republic",
     "synonyms": [
-      "Central African Republic"
+      "Central African Republic",
+      "The Central African Republic",
+      "CF"
+    ],
+    "citizens": [
+      "Citizen of the Central African Republic"
     ]
   },
   {
@@ -310,7 +482,12 @@
     "name": "Chad",
     "synonyms": [
       "Sahel",
-      "Chad"
+      "Chad",
+      "The Republic of Chad",
+      "TD"
+    ],
+    "citizens": [
+      "Chadian"
     ]
   },
   {
@@ -324,42 +501,72 @@
     "slug": "chile",
     "name": "Chile",
     "synonyms": [
-      "Chile"
+      "Chile",
+      "The Republic of Chile",
+      "CL"
+    ],
+    "citizens": [
+      "Chilean"
     ]
   },
   {
     "slug": "comoros",
     "name": "Comoros",
     "synonyms": [
-      "Comoros"
+      "Comoros",
+      "The Union of the Comoros",
+      "KM"
+    ],
+    "citizens": [
+      "Comoran"
     ]
   },
   {
     "slug": "congo",
     "name": "Congo",
     "synonyms": [
-      "Congo"
+      "Congo",
+      "The Republic of the Congo",
+      "CG"
+    ],
+    "citizens": [
+      "Citizen of the Republic of the Congo"
     ]
   },
   {
     "slug": "costa-rica",
     "name": "Costa Rica",
     "synonyms": [
-      "Costa Rica"
+      "Costa Rica",
+      "The Republic of Costa Rica",
+      "CR"
+    ],
+    "citizens": [
+      "Costa Rican"
     ]
   },
   {
     "slug": "china",
     "name": "China",
     "synonyms": [
-      "China"
+      "China",
+      "The People's Republic of China",
+      "CN"
+    ],
+    "citizens": [
+      "Chinese"
     ]
   },
   {
     "slug": "croatia",
     "name": "Croatia",
     "synonyms": [
-      "Croatia"
+      "Croatia",
+      "The Republic of Croatia",
+      "HR"
+    ],
+    "citizens": [
+      "Croatian"
     ]
   },
   {
@@ -376,21 +583,36 @@
     "slug": "cuba",
     "name": "Cuba",
     "synonyms": [
-      "Cuba"
+      "Cuba",
+      "The Republic of Cuba",
+      "CU"
+    ],
+    "citizens": [
+      "Cuban"
     ]
   },
   {
     "slug": "cyprus",
     "name": "Cyprus",
     "synonyms": [
-      "Cyprus"
+      "Cyprus",
+      "The Republic of Cyprus",
+      "CY"
+    ],
+    "citizens": [
+      "Cypriot"
     ]
   },
   {
     "slug": "colombia",
     "name": "Colombia",
     "synonyms": [
-      "Colombia"
+      "Colombia",
+      "The Republic of Colombia",
+      "CO"
+    ],
+    "citizens": [
+      "Colombian"
     ]
   },
   {
@@ -407,35 +629,60 @@
       "arctic",
       "Faroe Islands",
       "Faroes",
-      "Denmark"
+      "Denmark",
+      "The Kingdom of Denmark",
+      "DK"
+    ],
+    "citizens": [
+      "Dane"
     ]
   },
   {
     "slug": "djibouti",
     "name": "Djibouti",
     "synonyms": [
-      "Djibouti"
+      "Djibouti",
+      "The Republic of Djibouti",
+      "DJ"
+    ],
+    "citizens": [
+      "Djiboutian"
     ]
   },
   {
     "slug": "dominica",
     "name": "Dominica",
     "synonyms": [
-      "Dominica"
+      "Dominica",
+      "The Commonwealth of Dominica",
+      "DM"
+    ],
+    "citizens": [
+      "Dominican"
     ]
   },
   {
     "slug": "egypt",
     "name": "Egypt",
     "synonyms": [
-      "Egypt"
+      "Egypt",
+      "The Arab Republic of Egypt",
+      "EG"
+    ],
+    "citizens": [
+      "Egyptian"
     ]
   },
   {
     "slug": "ecuador",
     "name": "Ecuador",
     "synonyms": [
-      "Ecuador"
+      "Ecuador",
+      "The Republic of Ecuador",
+      "EC"
+    ],
+    "citizens": [
+      "Ecuadorean"
     ]
   },
   {
@@ -443,42 +690,72 @@
     "name": "Eritrea",
     "synonyms": [
       "Sahel",
-      "Eritrea"
+      "Eritrea",
+      "The State of Eritrea",
+      "ER"
+    ],
+    "citizens": [
+      "Eritrean"
     ]
   },
   {
     "slug": "el-salvador",
     "name": "El Salvador",
     "synonyms": [
-      "El Salvador"
+      "El Salvador",
+      "The Republic of El Salvador",
+      "SV"
+    ],
+    "citizens": [
+      "Salvadorean"
     ]
   },
   {
     "slug": "estonia",
     "name": "Estonia",
     "synonyms": [
-      "Estonia"
+      "Estonia",
+      "The Republic of Estonia",
+      "EE"
+    ],
+    "citizens": [
+      "Estonian"
     ]
   },
   {
     "slug": "equatorial-guinea",
     "name": "Equatorial Guinea",
     "synonyms": [
-      "Equatorial Guinea"
+      "Equatorial Guinea",
+      "The Republic of Equatorial Guinea",
+      "GQ"
+    ],
+    "citizens": [
+      "Equatorial Guinean"
     ]
   },
   {
     "slug": "ethiopia",
     "name": "Ethiopia",
     "synonyms": [
-      "Ethiopia"
+      "Ethiopia",
+      "The Federal Democratic Republic of Ethiopia",
+      "ET"
+    ],
+    "citizens": [
+      "Ethiopian"
     ]
   },
   {
     "slug": "fiji",
     "name": "Fiji",
     "synonyms": [
-      "Fiji"
+      "Fiji",
+      "The Republic of Fiji",
+      "FJ"
+    ],
+    "citizens": [
+      "Citizen of Fiji"
     ]
   },
   {
@@ -493,14 +770,26 @@
     "name": "Finland",
     "synonyms": [
       "arctic",
-      "Finland"
+      "Finland",
+      "The Republic of Finland",
+      "FI"
+    ],
+    "citizens": [
+      "Finn"
     ]
   },
   {
     "slug": "france",
     "name": "France",
     "synonyms": [
-      "France"
+      "France",
+      "The French Republic",
+      "FR"
+    ],
+    "citizens": [
+      "French citizen",
+      "Frenchman",
+      "Frenchwoman"
     ]
   },
   {
@@ -529,21 +818,36 @@
     "slug": "gabon",
     "name": "Gabon",
     "synonyms": [
-      "Gabon"
+      "Gabon",
+      "The Gabonese Republic",
+      "GA"
+    ],
+    "citizens": [
+      "Gabonese"
     ]
   },
   {
     "slug": "georgia",
     "name": "Georgia",
     "synonyms": [
-      "Georgia"
+      "Georgia",
+      "Georgia",
+      "GE"
+    ],
+    "citizens": [
+      "Georgian"
     ]
   },
   {
     "slug": "germany",
     "name": "Germany",
     "synonyms": [
-      "Germany"
+      "Germany",
+      "The Federal Republic of Germany",
+      "DE"
+    ],
+    "citizens": [
+      "German"
     ]
   },
   {
@@ -557,28 +861,48 @@
     "slug": "ghana",
     "name": "Ghana",
     "synonyms": [
-      "Ghana"
+      "Ghana",
+      "The Republic of Ghana",
+      "GH"
+    ],
+    "citizens": [
+      "Ghanaian"
     ]
   },
   {
     "slug": "grenada",
     "name": "Grenada",
     "synonyms": [
-      "Grenada"
+      "Grenada",
+      "Grenada",
+      "GD"
+    ],
+    "citizens": [
+      "Grenadian"
     ]
   },
   {
     "slug": "greece",
     "name": "Greece",
     "synonyms": [
-      "Greece"
+      "Greece",
+      "The Hellenic Republic",
+      "GR"
+    ],
+    "citizens": [
+      "Greek"
     ]
   },
   {
     "slug": "guatemala",
     "name": "Guatemala",
     "synonyms": [
-      "Guatemala"
+      "Guatemala",
+      "The Republic of Guatemala",
+      "GT"
+    ],
+    "citizens": [
+      "Guatemalan"
     ]
   },
   {
@@ -592,42 +916,72 @@
     "slug": "guinea",
     "name": "Guinea",
     "synonyms": [
-      "Guinea"
+      "Guinea",
+      "The Republic of Guinea",
+      "GN"
+    ],
+    "citizens": [
+      "Guinean"
     ]
   },
   {
     "slug": "guinea-bissau",
     "name": "Guinea-Bissau",
     "synonyms": [
-      "Guinea-Bissau"
+      "Guinea-Bissau",
+      "The Republic of Guinea-Bissau",
+      "GW"
+    ],
+    "citizens": [
+      "Citizen of Guinea-Bissau"
     ]
   },
   {
     "slug": "guyana",
     "name": "Guyana",
     "synonyms": [
-      "Guyana"
+      "Guyana",
+      "The Co-operative Republic of Guyana",
+      "GY"
+    ],
+    "citizens": [
+      "Guyanese"
     ]
   },
   {
     "slug": "honduras",
     "name": "Honduras",
     "synonyms": [
-      "Honduras"
+      "Honduras",
+      "The Republic of Honduras",
+      "HN"
+    ],
+    "citizens": [
+      "Honduran"
     ]
   },
   {
     "slug": "haiti",
     "name": "Haiti",
     "synonyms": [
-      "Haiti"
+      "Haiti",
+      "The Republic of Haiti",
+      "HT"
+    ],
+    "citizens": [
+      "Haitian"
     ]
   },
   {
     "slug": "hungary",
     "name": "Hungary",
     "synonyms": [
-      "Hungary"
+      "Hungary",
+      "Hungary",
+      "HU"
+    ],
+    "citizens": [
+      "Hungarian"
     ]
   },
   {
@@ -635,14 +989,24 @@
     "name": "Iceland",
     "synonyms": [
       "arctic",
-      "Iceland"
+      "Iceland",
+      "The Republic of Iceland",
+      "IS"
+    ],
+    "citizens": [
+      "Icelander"
     ]
   },
   {
     "slug": "india",
     "name": "India",
     "synonyms": [
-      "India"
+      "India",
+      "The Republic of India",
+      "IN"
+    ],
+    "citizens": [
+      "Indian"
     ]
   },
   {
@@ -650,140 +1014,241 @@
     "name": "Indonesia",
     "synonyms": [
       "Borneo",
-      "Indonesia"
+      "Indonesia",
+      "The Republic of Indonesia",
+      "ID"
+    ],
+    "citizens": [
+      "Indonesian"
     ]
   },
   {
     "slug": "iran",
     "name": "Iran",
     "synonyms": [
-      "Iran"
+      "Iran",
+      "The Islamic Republic of Iran",
+      "IR"
+    ],
+    "citizens": [
+      "Iranian"
     ]
   },
   {
     "slug": "israel",
     "name": "Israel",
     "synonyms": [
-      "Israel"
+      "Israel",
+      "The State of Israel",
+      "IL"
+    ],
+    "citizens": [
+      "Israeli"
     ]
   },
   {
     "slug": "ireland",
     "name": "Ireland",
     "synonyms": [
-      "Ireland"
+      "Ireland",
+      "Ireland",
+      "IE"
+    ],
+    "citizens": [
+      "Citizen of Ireland",
+      "Irish citizen"
     ]
   },
   {
     "slug": "iraq",
     "name": "Iraq",
     "synonyms": [
-      "Iraq"
+      "Iraq",
+      "The Republic of Iraq",
+      "IQ"
+    ],
+    "citizens": [
+      "Iraqi"
     ]
   },
   {
     "slug": "italy",
     "name": "Italy",
     "synonyms": [
-      "Italy"
+      "Italy",
+      "The Italian Republic",
+      "IT"
+    ],
+    "citizens": [
+      "Italian"
     ]
   },
   {
     "slug": "jamaica",
     "name": "Jamaica",
     "synonyms": [
-      "Jamaica"
+      "Jamaica",
+      "Jamaica",
+      "JM"
+    ],
+    "citizens": [
+      "Jamaican"
     ]
   },
   {
     "slug": "japan",
     "name": "Japan",
     "synonyms": [
-      "Japan"
+      "Japan",
+      "Japan",
+      "JP"
+    ],
+    "citizens": [
+      "Japanese"
     ]
   },
   {
     "slug": "jordan",
     "name": "Jordan",
     "synonyms": [
-      "Jordan"
+      "Jordan",
+      "The Hashemite Kingdom of Jordan",
+      "JO"
+    ],
+    "citizens": [
+      "Jordanian"
     ]
   },
   {
     "slug": "kazakhstan",
     "name": "Kazakhstan",
     "synonyms": [
-      "Kazakhstan"
+      "Kazakhstan",
+      "The Republic of Kazakhstan",
+      "KZ"
+    ],
+    "citizens": [
+      "Kazakh"
     ]
   },
   {
     "slug": "kenya",
     "name": "Kenya",
     "synonyms": [
-      "Kenya"
+      "Kenya",
+      "The Republic of Kenya",
+      "KE"
+    ],
+    "citizens": [
+      "Kenyan"
     ]
   },
   {
     "slug": "kosovo",
     "name": "Kosovo",
     "synonyms": [
-      "Kosovo"
+      "Kosovo",
+      "The Republic of Kosovo",
+      "XK"
+    ],
+    "citizens": [
+      "Kosovan"
     ]
   },
   {
     "slug": "kiribati",
     "name": "Kiribati",
     "synonyms": [
-      "Kiribati"
+      "Kiribati",
+      "The Republic of Kiribati",
+      "KI"
+    ],
+    "citizens": [
+      "Citizen of Kiribati"
     ]
   },
   {
     "slug": "kyrgyzstan",
     "name": "Kyrgyzstan",
     "synonyms": [
-      "Kyrgyzstan"
+      "Kyrgyzstan",
+      "The Kyrgyz Republic",
+      "KG"
+    ],
+    "citizens": [
+      "Kyrgyz"
     ]
   },
   {
     "slug": "kuwait",
     "name": "Kuwait",
     "synonyms": [
-      "Kuwait"
+      "Kuwait",
+      "The State of Kuwait",
+      "KW"
+    ],
+    "citizens": [
+      "Kuwaiti"
     ]
   },
   {
     "slug": "laos",
     "name": "Laos",
     "synonyms": [
-      "Laos"
+      "Laos",
+      "The Lao People's Democratic Republic",
+      "LA"
+    ],
+    "citizens": [
+      "Lao"
     ]
   },
   {
     "slug": "latvia",
     "name": "Latvia",
     "synonyms": [
-      "Latvia"
+      "Latvia",
+      "The Republic of Latvia",
+      "LV"
+    ],
+    "citizens": [
+      "Latvian"
     ]
   },
   {
     "slug": "lebanon",
     "name": "Lebanon",
     "synonyms": [
-      "Lebanon"
+      "Lebanon",
+      "The Lebanese Republic",
+      "LB"
+    ],
+    "citizens": [
+      "Lebanese"
     ]
   },
   {
     "slug": "lesotho",
     "name": "Lesotho",
     "synonyms": [
-      "Lesotho"
+      "Lesotho",
+      "The Kingdom of Lesotho",
+      "LS"
+    ],
+    "citizens": [
+      "Citizen of Lesotho"
     ]
   },
   {
     "slug": "liberia",
     "name": "Liberia",
     "synonyms": [
-      "Liberia"
+      "Liberia",
+      "The Republic of Liberia",
+      "LR"
+    ],
+    "citizens": [
+      "Liberian"
     ]
   },
   {
@@ -791,35 +1256,60 @@
     "name": "Libya",
     "synonyms": [
       "Sahel",
-      "Libya"
+      "Libya",
+      "Libya",
+      "LY"
+    ],
+    "citizens": [
+      "Libyan"
     ]
   },
   {
     "slug": "liechtenstein",
     "name": "Liechtenstein",
     "synonyms": [
-      "Liechtenstein"
+      "Liechtenstein",
+      "The Principality of Liechtenstein",
+      "LI"
+    ],
+    "citizens": [
+      "Liechtenstein citizen"
     ]
   },
   {
     "slug": "lithuania",
     "name": "Lithuania",
     "synonyms": [
-      "Lithuania"
+      "Lithuania",
+      "The Republic of Lithuania",
+      "LT"
+    ],
+    "citizens": [
+      "Lithuanian"
     ]
   },
   {
     "slug": "luxembourg",
     "name": "Luxembourg",
     "synonyms": [
-      "Luxembourg"
+      "Luxembourg",
+      "The Grand Duchy of Luxembourg",
+      "LU"
+    ],
+    "citizens": [
+      "Luxembourger"
     ]
   },
   {
     "slug": "macedonia",
     "name": "Macedonia",
     "synonyms": [
-      "Macedonia"
+      "Macedonia",
+      "The Republic of Macedonia",
+      "MK"
+    ],
+    "citizens": [
+      "Macedonian"
     ]
   },
   {
@@ -833,21 +1323,36 @@
     "slug": "madagascar",
     "name": "Madagascar",
     "synonyms": [
-      "Madagascar"
+      "Madagascar",
+      "The Republic of Madagascar",
+      "MG"
+    ],
+    "citizens": [
+      "Citizen of Madagascar"
     ]
   },
   {
     "slug": "malawi",
     "name": "Malawi",
     "synonyms": [
-      "Malawi"
+      "Malawi",
+      "The Republic of Malawi",
+      "MW"
+    ],
+    "citizens": [
+      "Malawian"
     ]
   },
   {
     "slug": "maldives",
     "name": "Maldives",
     "synonyms": [
-      "Maldives"
+      "Maldives",
+      "The Republic of Maldives",
+      "MV"
+    ],
+    "citizens": [
+      "Maldivian"
     ]
   },
   {
@@ -855,21 +1360,36 @@
     "name": "Mali",
     "synonyms": [
       "Sahel",
-      "Mali"
+      "Mali",
+      "The Republic of Mali",
+      "ML"
+    ],
+    "citizens": [
+      "Malian"
     ]
   },
   {
     "slug": "malta",
     "name": "Malta",
     "synonyms": [
-      "Malta"
+      "Malta",
+      "The Republic of Malta",
+      "MT"
+    ],
+    "citizens": [
+      "Maltese"
     ]
   },
   {
     "slug": "marshall-islands",
     "name": "Marshall Islands",
     "synonyms": [
-      "Marshall Islands"
+      "Marshall Islands",
+      "The Republic of the Marshall Islands",
+      "MH"
+    ],
+    "citizens": [
+      "Marshall Islander"
     ]
   },
   {
@@ -883,7 +1403,12 @@
     "slug": "mauritius",
     "name": "Mauritius",
     "synonyms": [
-      "Mauritius"
+      "Mauritius",
+      "The Republic of Mauritius",
+      "MU"
+    ],
+    "citizens": [
+      "Mauritian"
     ]
   },
   {
@@ -891,7 +1416,12 @@
     "name": "Mauritania",
     "synonyms": [
       "Sahel",
-      "Mauritania"
+      "Mauritania",
+      "The Islamic Republic of Mauritania",
+      "MR"
+    ],
+    "citizens": [
+      "Mauritanian"
     ]
   },
   {
@@ -905,35 +1435,60 @@
     "slug": "moldova",
     "name": "Moldova",
     "synonyms": [
-      "Moldova"
+      "Moldova",
+      "The Republic of Moldova",
+      "MD"
+    ],
+    "citizens": [
+      "Moldovan"
     ]
   },
   {
     "slug": "micronesia",
     "name": "Micronesia",
     "synonyms": [
-      "Micronesia"
+      "Micronesia",
+      "The Federated States of Micronesia",
+      "FM"
+    ],
+    "citizens": [
+      "Micronesian"
     ]
   },
   {
     "slug": "mexico",
     "name": "Mexico",
     "synonyms": [
-      "Mexico"
+      "Mexico",
+      "The United Mexican States",
+      "MX"
+    ],
+    "citizens": [
+      "Mexican"
     ]
   },
   {
     "slug": "monaco",
     "name": "Monaco",
     "synonyms": [
-      "Monaco"
+      "Monaco",
+      "The Principality of Monaco",
+      "MC"
+    ],
+    "citizens": [
+      "Monegasque"
     ]
   },
   {
     "slug": "montenegro",
     "name": "Montenegro",
     "synonyms": [
-      "Montenegro"
+      "Montenegro",
+      "Montenegro",
+      "ME"
+    ],
+    "citizens": [
+      "Montenegrin"
     ]
   },
   {
@@ -948,35 +1503,60 @@
     "name": "Morocco",
     "synonyms": [
       "Sahel",
-      "Morocco"
+      "Morocco",
+      "The Kingdom of Morocco",
+      "MA"
+    ],
+    "citizens": [
+      "Moroccan"
     ]
   },
   {
     "slug": "namibia",
     "name": "Namibia",
     "synonyms": [
-      "Namibia"
+      "Namibia",
+      "The Republic of Namibia",
+      "NA"
+    ],
+    "citizens": [
+      "Namibian"
     ]
   },
   {
     "slug": "mozambique",
     "name": "Mozambique",
     "synonyms": [
-      "Mozambique"
+      "Mozambique",
+      "The Republic of Mozambique",
+      "MZ"
+    ],
+    "citizens": [
+      "Mozambican"
     ]
   },
   {
     "slug": "nepal",
     "name": "Nepal",
     "synonyms": [
-      "Nepal"
+      "Nepal",
+      "The Federal Democratic Republic of Nepal",
+      "NP"
+    ],
+    "citizens": [
+      "Nepalese"
     ]
   },
   {
     "slug": "nauru",
     "name": "Nauru",
     "synonyms": [
-      "Nauru"
+      "Nauru",
+      "The Republic of Nauru",
+      "NR"
+    ],
+    "citizens": [
+      "Nauruan"
     ]
   },
   {
@@ -984,7 +1564,14 @@
     "name": "Netherlands",
     "synonyms": [
       "Holland",
-      "Netherlands"
+      "Netherlands",
+      "The Kingdom of the Netherlands",
+      "NL"
+    ],
+    "citizens": [
+      "Dutch citizen",
+      "Dutchman",
+      "Dutchwoman"
     ]
   },
   {
@@ -999,14 +1586,24 @@
     "name": "New Zealand",
     "synonyms": [
       "Cook Islands",
-      "New Zealand"
+      "New Zealand",
+      "New Zealand",
+      "NZ"
+    ],
+    "citizens": [
+      "New Zealander"
     ]
   },
   {
     "slug": "nicaragua",
     "name": "Nicaragua",
     "synonyms": [
-      "Nicaragua"
+      "Nicaragua",
+      "The Republic of Nicaragua",
+      "NI"
+    ],
+    "citizens": [
+      "Nicaraguan"
     ]
   },
   {
@@ -1014,7 +1611,12 @@
     "name": "Nigeria",
     "synonyms": [
       "Sahel",
-      "Nigeria"
+      "Nigeria",
+      "The Federal Republic of Nigeria",
+      "NG"
+    ],
+    "citizens": [
+      "Nigerian"
     ]
   },
   {
@@ -1022,7 +1624,12 @@
     "name": "Norway",
     "synonyms": [
       "arctic",
-      "Norway"
+      "Norway",
+      "The Kingdom of Norway",
+      "NO"
+    ],
+    "citizens": [
+      "Norwegian"
     ]
   },
   {
@@ -1036,28 +1643,48 @@
     "slug": "oman",
     "name": "Oman",
     "synonyms": [
-      "Oman"
+      "Oman",
+      "The Sultanate of Oman",
+      "OM"
+    ],
+    "citizens": [
+      "Omani"
     ]
   },
   {
     "slug": "pakistan",
     "name": "Pakistan",
     "synonyms": [
-      "Pakistan"
+      "Pakistan",
+      "The Islamic Republic of Pakistan",
+      "PK"
+    ],
+    "citizens": [
+      "Pakistani"
     ]
   },
   {
     "slug": "panama",
     "name": "Panama",
     "synonyms": [
-      "Panama"
+      "Panama",
+      "The Republic of Panama",
+      "PA"
+    ],
+    "citizens": [
+      "Panamanian"
     ]
   },
   {
     "slug": "palau",
     "name": "Palau",
     "synonyms": [
-      "Palau"
+      "Palau",
+      "The Republic of Palau",
+      "PW"
+    ],
+    "citizens": [
+      "Palauan"
     ]
   },
   {
@@ -1065,28 +1692,48 @@
     "name": "Papua New Guinea",
     "synonyms": [
       "PNG",
-      "Papua New Guinea"
+      "Papua New Guinea",
+      "The Independent State of Papua New Guinea",
+      "PG"
+    ],
+    "citizens": [
+      "Papua New Guinean"
     ]
   },
   {
     "slug": "paraguay",
     "name": "Paraguay",
     "synonyms": [
-      "Paraguay"
+      "Paraguay",
+      "The Republic of Paraguay",
+      "PY"
+    ],
+    "citizens": [
+      "Paraguayan"
     ]
   },
   {
     "slug": "peru",
     "name": "Peru",
     "synonyms": [
-      "Peru"
+      "Peru",
+      "The Republic of Peru",
+      "PE"
+    ],
+    "citizens": [
+      "Peruvian"
     ]
   },
   {
     "slug": "poland",
     "name": "Poland",
     "synonyms": [
-      "Poland"
+      "Poland",
+      "The Republic of Poland",
+      "PL"
+    ],
+    "citizens": [
+      "Pole"
     ]
   },
   {
@@ -1100,14 +1747,24 @@
     "slug": "qatar",
     "name": "Qatar",
     "synonyms": [
-      "Qatar"
+      "Qatar",
+      "The State of Qatar",
+      "QA"
+    ],
+    "citizens": [
+      "Qatari"
     ]
   },
   {
     "slug": "romania",
     "name": "Romania",
     "synonyms": [
-      "Romania"
+      "Romania",
+      "Romania",
+      "RO"
+    ],
+    "citizens": [
+      "Romanian"
     ]
   },
   {
@@ -1122,7 +1779,12 @@
     "slug": "rwanda",
     "name": "Rwanda",
     "synonyms": [
-      "Rwanda"
+      "Rwanda",
+      "The Republic of Rwanda",
+      "RW"
+    ],
+    "citizens": [
+      "Rwandan"
     ]
   },
   {
@@ -1138,56 +1800,96 @@
     "slug": "samoa",
     "name": "Samoa",
     "synonyms": [
-      "Samoa"
+      "Samoa",
+      "The Independent State of Samoa",
+      "WS"
+    ],
+    "citizens": [
+      "Samoan"
     ]
   },
   {
     "slug": "san-marino",
     "name": "San Marino",
     "synonyms": [
-      "San Marino"
+      "San Marino",
+      "The Republic of San Marino",
+      "SM"
+    ],
+    "citizens": [
+      "Citizen of San Marino"
     ]
   },
   {
     "slug": "serbia",
     "name": "Serbia",
     "synonyms": [
-      "Serbia"
+      "Serbia",
+      "The Republic of Serbia",
+      "RS"
+    ],
+    "citizens": [
+      "Serbian"
     ]
   },
   {
     "slug": "seychelles",
     "name": "Seychelles",
     "synonyms": [
-      "Seychelles"
+      "Seychelles",
+      "The Republic of Seychelles",
+      "SC"
+    ],
+    "citizens": [
+      "Citizen of Seychelles"
     ]
   },
   {
     "slug": "sierra-leone",
     "name": "Sierra Leone",
     "synonyms": [
-      "Sierra Leone"
+      "Sierra Leone",
+      "The Republic of Sierra Leone",
+      "SL"
+    ],
+    "citizens": [
+      "Sierra Leonean"
     ]
   },
   {
     "slug": "singapore",
     "name": "Singapore",
     "synonyms": [
-      "Singapore"
+      "Singapore",
+      "The Republic of Singapore",
+      "SG"
+    ],
+    "citizens": [
+      "Singaporean"
     ]
   },
   {
     "slug": "slovakia",
     "name": "Slovakia",
     "synonyms": [
-      "Slovakia"
+      "Slovakia",
+      "The Slovak Republic",
+      "SK"
+    ],
+    "citizens": [
+      "Slovak"
     ]
   },
   {
     "slug": "south-korea",
     "name": "South Korea",
     "synonyms": [
-      "South Korea"
+      "South Korea",
+      "The Republic of Korea",
+      "KR"
+    ],
+    "citizens": [
+      "South Korean"
     ]
   },
   {
@@ -1195,14 +1897,24 @@
     "name": "South Sudan",
     "synonyms": [
       "Sahel",
-      "South Sudan"
+      "South Sudan",
+      "The Republic of South Sudan",
+      "SS"
+    ],
+    "citizens": [
+      "South Sudanese"
     ]
   },
   {
     "slug": "sri-lanka",
     "name": "Sri Lanka",
     "synonyms": [
-      "Sri Lanka"
+      "Sri Lanka",
+      "The Democratic Socialist Republic of Sri Lanka",
+      "LK"
+    ],
+    "citizens": [
+      "Citizen of Sri Lanka"
     ]
   },
   {
@@ -1216,14 +1928,24 @@
     "slug": "st-kitts-and-nevis",
     "name": "St Kitts and Nevis",
     "synonyms": [
-      "St Kitts and Nevis"
+      "St Kitts and Nevis",
+      "The Federation of Saint Christopher and Nevis",
+      "KN"
+    ],
+    "citizens": [
+      "Citizen of St Christopher (St Kitts) and Nevis"
     ]
   },
   {
     "slug": "st-lucia",
     "name": "St Lucia",
     "synonyms": [
-      "St Lucia"
+      "St Lucia",
+      "Saint Lucia",
+      "LC"
+    ],
+    "citizens": [
+      "St Lucian"
     ]
   },
   {
@@ -1252,28 +1974,48 @@
     "name": "Sudan",
     "synonyms": [
       "Sahel",
-      "Sudan"
+      "Sudan",
+      "The Republic of the Sudan",
+      "SD"
+    ],
+    "citizens": [
+      "Sudanese"
     ]
   },
   {
     "slug": "suriname",
     "name": "Suriname",
     "synonyms": [
-      "Suriname"
+      "Suriname",
+      "The Republic of Suriname",
+      "SR"
+    ],
+    "citizens": [
+      "Surinamer"
     ]
   },
   {
     "slug": "switzerland",
     "name": "Switzerland",
     "synonyms": [
-      "Switzerland"
+      "Switzerland",
+      "The Swiss Confederation",
+      "CH"
+    ],
+    "citizens": [
+      "Swiss"
     ]
   },
   {
     "slug": "swaziland",
     "name": "Swaziland",
     "synonyms": [
-      "Swaziland"
+      "Swaziland",
+      "The Kingdom of Swaziland",
+      "SZ"
+    ],
+    "citizens": [
+      "Swazi"
     ]
   },
   {
@@ -1281,14 +2023,24 @@
     "name": "Sweden",
     "synonyms": [
       "arctic",
-      "Sweden"
+      "Sweden",
+      "The Kingdom of Sweden",
+      "SE"
+    ],
+    "citizens": [
+      "Swede"
     ]
   },
   {
     "slug": "syria",
     "name": "Syria",
     "synonyms": [
-      "Syria"
+      "Syria",
+      "The Syrian Arab Republic",
+      "SY"
+    ],
+    "citizens": [
+      "Syrian"
     ]
   },
   {
@@ -1302,28 +2054,48 @@
     "slug": "tajikistan",
     "name": "Tajikistan",
     "synonyms": [
-      "Tajikistan"
+      "Tajikistan",
+      "The Republic of Tajikistan",
+      "TJ"
+    ],
+    "citizens": [
+      "Tajik"
     ]
   },
   {
     "slug": "tanzania",
     "name": "Tanzania",
     "synonyms": [
-      "Tanzania"
+      "Tanzania",
+      "The United Republic of Tanzania",
+      "TZ"
+    ],
+    "citizens": [
+      "Tanzanian"
     ]
   },
   {
     "slug": "thailand",
     "name": "Thailand",
     "synonyms": [
-      "Thailand"
+      "Thailand",
+      "The Kingdom of Thailand",
+      "TH"
+    ],
+    "citizens": [
+      "Thai"
     ]
   },
   {
     "slug": "togo",
     "name": "Togo",
     "synonyms": [
-      "Togo"
+      "Togo",
+      "The Togolese Republic",
+      "TG"
+    ],
+    "citizens": [
+      "Togolese"
     ]
   },
   {
@@ -1338,42 +2110,72 @@
     "slug": "tonga",
     "name": "Tonga",
     "synonyms": [
-      "Tonga"
+      "Tonga",
+      "The Kingdom of Tonga",
+      "TO"
+    ],
+    "citizens": [
+      "Tongan"
     ]
   },
   {
     "slug": "trinidad-and-tobago",
     "name": "Trinidad and Tobago",
     "synonyms": [
-      "Trinidad and Tobago"
+      "Trinidad and Tobago",
+      "The Republic of Trinidad and Tobago",
+      "TT"
+    ],
+    "citizens": [
+      "Trinidad and Tobago citizen"
     ]
   },
   {
     "slug": "tunisia",
     "name": "Tunisia",
     "synonyms": [
-      "Tunisia"
+      "Tunisia",
+      "The Tunisian Republic",
+      "TN"
+    ],
+    "citizens": [
+      "Tunisian"
     ]
   },
   {
     "slug": "turkey",
     "name": "Turkey",
     "synonyms": [
-      "Turkey"
+      "Turkey",
+      "The Republic of Turkey",
+      "TR"
+    ],
+    "citizens": [
+      "Turk"
     ]
   },
   {
     "slug": "turkmenistan",
     "name": "Turkmenistan",
     "synonyms": [
-      "Turkmenistan"
+      "Turkmenistan",
+      "Turkmenistan",
+      "TM"
+    ],
+    "citizens": [
+      "Turkmen"
     ]
   },
   {
     "slug": "tuvalu",
     "name": "Tuvalu",
     "synonyms": [
-      "Tuvalu"
+      "Tuvalu",
+      "Tuvalu",
+      "TV"
+    ],
+    "citizens": [
+      "Tuvaluan"
     ]
   },
   {
@@ -1387,14 +2189,24 @@
     "slug": "ukraine",
     "name": "Ukraine",
     "synonyms": [
-      "Ukraine"
+      "Ukraine",
+      "Ukraine",
+      "UA"
+    ],
+    "citizens": [
+      "Ukrainian"
     ]
   },
   {
     "slug": "uganda",
     "name": "Uganda",
     "synonyms": [
-      "Uganda"
+      "Uganda",
+      "The Republic of Uganda",
+      "UG"
+    ],
+    "citizens": [
+      "Ugandan"
     ]
   },
   {
@@ -1403,42 +2215,72 @@
     "synonyms": [
       "UAE",
       "Dubai",
-      "United Arab Emirates"
+      "United Arab Emirates",
+      "The United Arab Emirates",
+      "AE"
+    ],
+    "citizens": [
+      "Citizen of the United Arab Emirates"
     ]
   },
   {
     "slug": "vanuatu",
     "name": "Vanuatu",
     "synonyms": [
-      "Vanuatu"
+      "Vanuatu",
+      "The Republic of Vanuatu",
+      "VU"
+    ],
+    "citizens": [
+      "Citizen of Vanuatu"
     ]
   },
   {
     "slug": "uruguay",
     "name": "Uruguay",
     "synonyms": [
-      "Uruguay"
+      "Uruguay",
+      "The Oriental Republic of Uruguay",
+      "UY"
+    ],
+    "citizens": [
+      "Uruguayan"
     ]
   },
   {
     "slug": "uzbekistan",
     "name": "Uzbekistan",
     "synonyms": [
-      "Uzbekistan"
+      "Uzbekistan",
+      "The Republic of Uzbekistan",
+      "UZ"
+    ],
+    "citizens": [
+      "Uzbek"
     ]
   },
   {
     "slug": "venezuela",
     "name": "Venezuela",
     "synonyms": [
-      "Venezuela"
+      "Venezuela",
+      "The Bolivarian Republic of Venezuela",
+      "VE"
+    ],
+    "citizens": [
+      "Venezuelan"
     ]
   },
   {
     "slug": "vietnam",
     "name": "Vietnam",
     "synonyms": [
-      "Vietnam"
+      "Vietnam",
+      "The Socialist Republic of Vietnam",
+      "VN"
+    ],
+    "citizens": [
+      "Vietnamese"
     ]
   },
   {
@@ -1452,7 +2294,12 @@
     "slug": "zambia",
     "name": "Zambia",
     "synonyms": [
-      "Zambia"
+      "Zambia",
+      "The Republic of Zambia",
+      "ZM"
+    ],
+    "citizens": [
+      "Zambian"
     ]
   },
   {
@@ -1467,28 +2314,50 @@
     "slug": "yemen",
     "name": "Yemen",
     "synonyms": [
-      "Yemen"
+      "Yemen",
+      "The Republic of Yemen",
+      "YE"
+    ],
+    "citizens": [
+      "Yemeni"
     ]
   },
   {
     "slug": "zimbabwe",
     "name": "Zimbabwe",
     "synonyms": [
-      "Zimbabwe"
+      "Zimbabwe",
+      "The Republic of Zimbabwe",
+      "ZW"
+    ],
+    "citizens": [
+      "Zimbabwean"
     ]
   },
   {
     "slug": "philippines",
     "name": "Philippines",
     "synonyms": [
-      "Philippines"
+      "Philippines",
+      "The Republic of the Philippines",
+      "PH"
+    ],
+    "citizens": [
+      "Filipino",
+      "Filipina"
     ]
   },
   {
     "slug": "north-korea",
     "name": "North Korea",
     "synonyms": [
-      "North Korea"
+      "North Korea",
+      "The Democratic People's Republic of Korea",
+      "KP"
+    ],
+    "citizens": [
+      "Citizen of the Democratic People's Republic of Korea",
+      "Citizen of the DPRK"
     ]
   },
   {
@@ -1496,21 +2365,36 @@
     "name": "Portugal",
     "synonyms": [
       "Madeira",
-      "Portugal"
+      "Portugal",
+      "The Portuguese Republic",
+      "PT"
+    ],
+    "citizens": [
+      "Portuguese"
     ]
   },
   {
     "slug": "saudi-arabia",
     "name": "Saudi Arabia",
     "synonyms": [
-      "Saudi Arabia"
+      "Saudi Arabia",
+      "The Kingdom of Saudi Arabia",
+      "SA"
+    ],
+    "citizens": [
+      "Saudi Arabian"
     ]
   },
   {
     "slug": "dominican-republic",
     "name": "Dominican Republic",
     "synonyms": [
-      "Dominican Republic"
+      "Dominican Republic",
+      "The Dominican Republic",
+      "DO"
+    ],
+    "citizens": [
+      "Citizen of the Dominican Republic"
     ]
   },
   {
@@ -1518,14 +2402,24 @@
     "name": "Senegal",
     "synonyms": [
       "Sahel",
-      "Senegal"
+      "Senegal",
+      "The Republic of Senegal",
+      "SN"
+    ],
+    "citizens": [
+      "Senegalese"
     ]
   },
   {
     "slug": "mongolia",
     "name": "Mongolia",
     "synonyms": [
-      "Mongolia"
+      "Mongolia",
+      "Mongolia",
+      "MN"
+    ],
+    "citizens": [
+      "Mongolian"
     ]
   },
   {
@@ -1533,7 +2427,12 @@
     "name": "Malaysia",
     "synonyms": [
       "Borneo",
-      "Malaysia"
+      "Malaysia",
+      "Malaysia",
+      "MY"
+    ],
+    "citizens": [
+      "Citizen of Malaysia"
     ]
   },
   {
@@ -1548,7 +2447,12 @@
     "slug": "burma",
     "name": "Burma",
     "synonyms": [
-      "Burma"
+      "Burma",
+      "The Republic of the Union of Myanmar",
+      "MM"
+    ],
+    "citizens": [
+      "Burmese"
     ]
   },
   {
@@ -1563,7 +2467,12 @@
     "name": "Niger",
     "synonyms": [
       "Sahel",
-      "Niger"
+      "Niger",
+      "The Republic of Niger",
+      "NE"
+    ],
+    "citizens": [
+      "Citizen of Niger"
     ]
   },
   {
@@ -1587,14 +2496,25 @@
       "Canary Islands",
       "Canaries",
       "Gran Canaria",
-      "Spain"
+      "Spain",
+      "The Kingdom of Spain",
+      "ES"
+    ],
+    "citizens": [
+      "Spaniard",
+      "Spanish citizen"
     ]
   },
   {
     "slug": "bahrain",
     "name": "Bahrain",
     "synonyms": [
-      "Bahrain"
+      "Bahrain",
+      "The Kingdom of Bahrain",
+      "BH"
+    ],
+    "citizens": [
+      "Bahraini"
     ]
   },
   {
@@ -1602,7 +2522,12 @@
     "name": "Russia",
     "synonyms": [
       "arctic",
-      "Russia"
+      "Russia",
+      "The Russian Federation",
+      "RU"
+    ],
+    "citizens": [
+      "Russian"
     ]
   },
   {
@@ -1628,7 +2553,12 @@
     "slug": "australia",
     "name": "Australia",
     "synonyms": [
-      "Australia"
+      "Australia",
+      "The Commonwealth of Australia",
+      "AU"
+    ],
+    "citizens": [
+      "Australian"
     ]
   },
   {
@@ -1637,7 +2567,13 @@
     "synonyms": [
       "United Kingdom",
       "UK",
-      "The United Kingdom of Great Britain and Northern Ireland"
+      "Great Britain",
+      "The United Kingdom of Great Britain and Northern Ireland",
+      "GB"
+    ],
+    "citizens": [
+      "Briton",
+      "British citizen"
     ]
   },
   {

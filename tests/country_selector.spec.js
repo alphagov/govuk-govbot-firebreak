@@ -6,23 +6,33 @@ const CountrySelector = require('../src/country_selector');
 describe('CountrySelector', () => {
   const countrySelector = new CountrySelector();
 
-  it("can find 'Great Britain'", () => {
-    const country = countrySelector.findCountry('Great Britain');
-    expect(country.slug).to.equal('united-kingdom');
-  });
+  const testCases = [
+    {
+      input: "Great Britain",
+      expected: "united-kingdom",
+    },
+    {
+      input: "holland",
+      expected: "netherlands",
+    },
+    {
+      input: 'US',
+      expected: 'usa',
+    },
+    {
+      input: 'amrca',
+      expected: 'usa',
+    },
+    {
+      input: 'dutch',
+      expected: 'netherlands',
+    }
+  ];
 
-  it("can find 'holland'", () => {
-    const country = countrySelector.findCountry('holland');
-    expect(country.slug).to.equal('netherlands');
-  });
-
-  it("can find 'US'", () => {
-    const country = countrySelector.findCountry('US');
-    expect(country.slug).to.equal('usa');
-  });
-
-  it("can find 'amrca'", () => {
-    const country = countrySelector.findCountry('amrca');
-    expect(country.slug).to.equal('usa');
+  testCases.forEach(testCase => {
+    it(`can find "${testCase.input}"`, () => {
+      const country = countrySelector.findCountry(testCase.input);
+      expect(country.slug).to.equal(testCase.expected);
+    });
   });
 });
