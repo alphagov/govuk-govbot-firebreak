@@ -1,15 +1,18 @@
 var Botkit = require('./lib/Botkit.js');
 var os = require('os');
 var request = require('sync-request');
-var emoji = require('node-emoji')
+var emoji = require('node-emoji');
 
 const SmartAnswerConversation = require('./src/smart_answer_conversation');
 const EmojiInterpreter = require('./src/emoji_interpreter');
+
+const redisStorage = require('botkit-storage-redis')({url: process.env.REDIS_URL});
 
 var controller = Botkit.facebookbot({
   debug: true,
   access_token: process.env.page_token,
   verify_token: process.env.verify_token,
+  storage: redisStorage,
 });
 
 var bot = controller.spawn({});
